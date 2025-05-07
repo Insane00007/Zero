@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zero Hunger</title>
+    <style>
+        html { scroll-behavior: smooth; }
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+        header, nav, section, footer { padding: 20px; }
+        header { background-color: #004080; color: white; display: flex; align-items: center; justify-content: space-between; }
+        header .logo { font-weight: bold; font-size: 20px; }
+        nav { background-color: #f0f0f0; display: flex; justify-content: space-around; flex-wrap: wrap; }
+        nav a { text-decoration: none; color: #004080; font-weight: bold; margin: 10px; }
+        .main-img { width: 100%; height: 300px; background: #ccc url(https://images.app.goo.gl/5M7riuEEEjJ15cw9A) center/cover no-repeat; }
+        .grid { display: flex; justify-content: space-around; margin-top: 20px; text-align: center; }
+        .grid div { width: 30%; background-color: #e6f2ff; padding: 15px; border-radius: 8px; }
+        .menu-icon { display: none; font-size: 24px; }
+        footer { background-color: #004080; color: white; text-align: center; padding: 15px; margin-top: 30px; }
+
+        /* Scroll Button Styles */  
+        .scroll-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #004080;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            cursor: pointer;
+            display: none; /* Hidden by default */
+        }
+
+        .scroll-button:hover {
+            background-color: #003366;
+        }
+
+        /* Center Links Section */
+        .middle-links {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .middle-links a {
+            text-decoration: none;
+            color: #004080;
+            font-weight: bold;
+            margin: 0 15px;
+            padding: 10px 15px;
+            border: 2px solid #004080;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .middle-links a:hover {
+            background-color: #e6f2ff;
+        }
+
+        @media (max-width: 768px) {
+            .grid { flex-direction: column; align-items: center; }
+            .grid div { width: 80%; margin-bottom: 15px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Zero Hunger</div>
+        <div class="menu-icon">&#9776;</div>
+        <div>
+            <a href="#about" style="color:white; margin-right: 15px;">About Us</a>
+        </div>
+    </header>
+
+    <nav>
+        <a href="#collaboration">Alliance</a>
+        <a href="#buy-sell">MarketPlace Transaction</a>
+        <a href="#agri">Agronomy</a>
+        <a href="#outsource">Subcontract</a>
+        <a href="#contribution"> Leading Contribution</a>
+    </nav>
+
+    <div class="main-img">
+        <img src="C:\Users\Admin\Downloads\Food1_Food2_Food3_Food4.jpeg" alt="A photo 1" width="1500" height="350" /> 
+    </div>
+
+    <!-- Middle Links Section -->
+    <section class="middle-links">
+        <a href="Donators.html">Donators</a>
+        <a href="#receiver">Beneficiaries</a>
+        <a href="#partners">Affiliates</a>
+    </section>
+
+    <section class="grid">
+        <div>
+            <h3>Appreciation</h3>
+            <p>Recognizing valuable contributors to our mission.</p>
+        </div>
+        <div>
+            <h3>Top Donation</h3>
+            <p>Highlighting the most generous donations.</p>
+        </div>
+        <div>
+            <h3>Receivers</h3>
+            <p>Profiles of those who benefited from our services.</p>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>We are a company committed to taking meaningful steps to defeat hunger. Through innovative solutions, strategic partnerships, and a strong focus on sustainability, we work tirelessly to provide access to nutritious food for those in need. Our mission is not only to alleviate hunger but to create long-term, positive change in communities, ensuring that no one has to face food insecurity. Together, we strive to make a lasting impact and build a world where everyone has enough to eat.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Zero Hunger All rights reserved.</p>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-button" onclick="scrollToTop()">Back to Top</button>
+
+    <script>
+        // Scroll Button Visibility
+        window.onscroll = function() {
+            var scrollButton = document.querySelector(".scroll-button");
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                scrollButton.style.display = "block";
+            } else {
+                scrollButton.style.display = "none";
+            }
+        };
+
+        // Scroll to Top Function
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
