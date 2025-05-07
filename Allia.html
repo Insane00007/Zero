@@ -1,0 +1,36 @@
+<section id="collaboration" style="padding: 40px; background-color: #eaf4f8;">
+  <div style="max-width: 600px; margin: auto; background-color: white; padding: 30px; box-shadow: 0 0 10px rgba(0,0,0,0.1); border-radius: 8px;">
+
+    <!-- Back to Home Link -->
+    <a href="index.html" style="display: block; margin-bottom: 20px; color: #004080; text-decoration: none;">← Back to Home</a>
+
+    <!-- Heading -->
+    <h2 style="text-align: center; color: #004080;">Alliance Partnership Form</h2>
+    
+    <!-- Form -->
+    <form action="submit_alliance.php" method="post" style="display: flex; flex-direction: column; gap: 15px;">
+      
+      <label for="ally-name">Full Name</label>
+      <input type="text" id="ally-name" name="ally_name" required>
+
+      <label for="ally-address">Address</label>
+      <input type="text" id="ally-address" name="ally_address" required>
+
+      <label for="ally-contact">Contact Number</label>
+      <input type="tel" id="ally-contact" name="ally_contact" required
+             pattern="^\+?[0-9\s\-]{10,15}$"
+             placeholder="e.g., +1 234 567 8901">
+
+      <label for="ally-profession">Profession</label>
+      <input type="text" id="ally-profession" name="ally_profession" required>
+
+      <label for="ally-reason">Why do you want to contribute?</label>
+      <textarea id="ally-reason" name="ally_reason" rows="4" placeholder="Share your motivation..." required></textarea>
+
+      <!-- Blue Submit Button -->
+      <button type="submit" style="background-color: #004080; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer;">
+        Submit Alliance Request
+      </button>
+    </form>
+  </div>
+</section>
