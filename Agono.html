@@ -14,7 +14,7 @@
       </div>
   
       <!-- Farmer Form -->
-      <form id="farmer-form" style="display: none; flex-direction: column; gap: 15px;" action="submit_farmer.php" method="post">
+      <form id="farmer-form" style="display: none; flex-direction: column; gap: 15px;" action="https://formspree.io/f/xyzwjweg" method="POST">
         <label>Full Name</label>
         <input type="text" name="farmer_name" required>
   
@@ -35,12 +35,13 @@
         <label>Type of Product</label>
         <textarea name="product_type" rows="4" placeholder="Describe the product..." required></textarea>
   
+        <!-- Submit Button -->
         <button type="submit" style="background-color: #004080; color: white; padding: 10px;">Submit</button>
         <button type="button" onclick="goBack()" style="padding: 10px;">← Back</button>
       </form>
   
       <!-- Buyer Form -->
-      <form id="buyer-form" style="display: none; flex-direction: column; gap: 15px;" action="submit_buyer.php" method="post">
+      <form id="buyer-form" style="display: none; flex-direction: column; gap: 15px;" action="https://formspree.io/f/xyzwjweg" method="POST">
         <label>Full Name</label>
         <input type="text" name="buyer_name" required>
   
@@ -61,6 +62,7 @@
         <label>Type of Product</label>
         <textarea name="buyer_product_type" rows="4" placeholder="Describe the desired product..." required></textarea>
   
+        <!-- Submit Button -->
         <button type="submit" style="background-color: #004080; color: white; padding: 10px;">Submit</button>
         <button type="button" onclick="goBack()" style="padding: 10px;">← Back</button>
       </form>
@@ -80,3 +82,4 @@
       document.getElementById('agronomy-options').style.display = 'block';
     }
   </script>
+
