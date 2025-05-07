@@ -1,0 +1,82 @@
+<section id="agronomy" style="padding: 40px; background-color: #eaf4f8;">
+    <div style="max-width: 600px; margin: auto; background-color: white; padding: 30px; box-shadow: 0 0 10px rgba(0,0,0,0.1); border-radius: 8px;">
+  
+      <!-- Back to Home -->
+      <a href="index.html" style="color: #004080; text-decoration: none;">← Back to Homepage</a>
+  
+      <!-- Title -->
+      <h2 style="text-align: center; color: #004080;">Agronomy</h2>
+  
+      <!-- Agronomy Options -->
+      <div id="agronomy-options" style="text-align: center;">
+        <button onclick="showForm('farmer')" style="margin: 10px; padding: 10px 20px; background-color: #004080; color: white; border: none; border-radius: 5px;">Farmer</button>
+        <button onclick="showForm('buyer')" style="margin: 10px; padding: 10px 20px; background-color: #004080; color: white; border: none; border-radius: 5px;">Buyer</button>
+      </div>
+  
+      <!-- Farmer Form -->
+      <form id="farmer-form" style="display: none; flex-direction: column; gap: 15px;" action="submit_farmer.php" method="post">
+        <label>Full Name</label>
+        <input type="text" name="farmer_name" required>
+  
+        <label>Location</label>
+        <input type="text" name="farmer_location" required>
+  
+        <label>Contact Number</label>
+        <input type="tel" name="farmer_contact" required
+               pattern="^\+?[0-9\s\-]{10,15}$"
+               placeholder="e.g., +1 234 567 8901">
+  
+        <label>Quantity</label>
+        <input type="text" name="quantity" required>
+  
+        <label>Price</label>
+        <input type="text" name="price" required>
+  
+        <label>Type of Product</label>
+        <textarea name="product_type" rows="4" placeholder="Describe the product..." required></textarea>
+  
+        <button type="submit" style="background-color: #004080; color: white; padding: 10px;">Submit</button>
+        <button type="button" onclick="goBack()" style="padding: 10px;">← Back</button>
+      </form>
+  
+      <!-- Buyer Form -->
+      <form id="buyer-form" style="display: none; flex-direction: column; gap: 15px;" action="submit_buyer.php" method="post">
+        <label>Full Name</label>
+        <input type="text" name="buyer_name" required>
+  
+        <label>Location</label>
+        <input type="text" name="buyer_location" required>
+  
+        <label>Contact Number</label>
+        <input type="tel" name="buyer_contact" required
+               pattern="^\+?[0-9\s\-]{10,15}$"
+               placeholder="e.g., +1 234 567 8901">
+  
+        <label>Quantity</label>
+        <input type="text" name="buyer_quantity" required>
+  
+        <label>Price</label>
+        <input type="text" name="buyer_price" required>
+  
+        <label>Type of Product</label>
+        <textarea name="buyer_product_type" rows="4" placeholder="Describe the desired product..." required></textarea>
+  
+        <button type="submit" style="background-color: #004080; color: white; padding: 10px;">Submit</button>
+        <button type="button" onclick="goBack()" style="padding: 10px;">← Back</button>
+      </form>
+    </div>
+  </section>
+  
+  <script>
+    function showForm(type) {
+      document.getElementById('agronomy-options').style.display = 'none';
+      document.getElementById('farmer-form').style.display = (type === 'farmer') ? 'flex' : 'none';
+      document.getElementById('buyer-form').style.display = (type === 'buyer') ? 'flex' : 'none';
+    }
+  
+    function goBack() {
+      document.getElementById('farmer-form').style.display = 'none';
+      document.getElementById('buyer-form').style.display = 'none';
+      document.getElementById('agronomy-options').style.display = 'block';
+    }
+  </script>
