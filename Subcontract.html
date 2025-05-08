@@ -1,0 +1,43 @@
+<!-- Subcontract Section -->
+<section id="subcontract" style="padding: 40px; background-color: #f9f9ff;">
+    <div style="max-width: 600px; margin: auto; background-color: white; padding: 30px; box-shadow: 0 0 10px rgba(0,0,0,0.1); border-radius: 8px;">
+  
+      <!-- Heading -->
+      <h2 style="text-align: center; color: #004080; margin-bottom: 20px;">Subcontract Contribution Form</h2>
+  
+      <!-- Form -->
+      <form action="https://formspree.io/f/xyzwjweg" method="POST" style="display: flex; flex-direction: column; gap: 15px;">
+  
+        <label for="sub-name">Full Name</label>
+        <input type="text" id="sub-name" name="sub_name" required>
+  
+        <label for="sub-email">Email Address</label>
+        <input type="email" id="sub-email" name="sub_email" required>
+  
+        <label for="sub-contact">Contact Number</label>
+        <input type="tel" id="sub-contact" name="sub_contact" required
+               pattern="^\+?[0-9\s\-]{10,15}$"
+               placeholder="e.g., +1 234 567 8901">
+  
+        <label for="sub-profession">Profession</label>
+        <input type="text" id="sub-profession" name="sub_profession" required>
+  
+        <label for="sub-purpose">Purpose Behind the Donation</label>
+        <textarea id="sub-purpose" name="sub_purpose" rows="4" placeholder="Describe your intention..." required></textarea>
+  
+        <!-- Submit Button -->
+        <button type="submit" style="background-color: #004080; color: white; padding: 12px; border: none; border-radius: 5px; font-size: 16px; cursor: pointer;">
+          Submit Subcontract
+        </button>
+      </form>
+  
+      <!-- Back to Homepage Button -->
+      <div style="text-align: center; margin-top: 20px;">
+        <a href="index.html" style="display: inline-block; background-color: #ccc; color: #004080; text-decoration: none; padding: 10px 20px; border-radius: 5px;">
+          ← Back to Homepage
+        </a>
+      </div>
+  
+    </div>
+  </section>
+  
